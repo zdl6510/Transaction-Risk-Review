@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": [],
+    "outDir": ".tmp-test",
+    "rootDir": ".",
+    "noEmit": false
+  },
+  "include": ["src/risk.ts", "test/**/*.ts"]
+}

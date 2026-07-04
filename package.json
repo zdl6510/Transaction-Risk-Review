@@ -1,0 +1,35 @@
+{
+  "name": "transaction-risk-review",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker A2MCP/x402 API for deterministic transaction risk review.",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test .tmp-test/test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdl6510/Transaction-Risk-Review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/zdl6510/Transaction-Risk-Review/issues"
+  },
+  "homepage": "https://github.com/zdl6510/Transaction-Risk-Review#readme",
+  "dependencies": {
+    "@x402/core": "^2.17.0",
+    "@x402/evm": "^2.17.0",
+    "@x402/hono": "^2.17.0",
+    "hono": "^4.12.27"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.107.0"
+  }
+}

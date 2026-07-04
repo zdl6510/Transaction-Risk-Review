@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.wrangler-dry-run/
+.tmp-test/
+.dev.vars
+dist/
+*.log
+node_modules
