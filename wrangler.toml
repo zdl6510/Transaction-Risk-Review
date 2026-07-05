@@ -7,4 +7,4 @@ compatibility_flags = ["nodejs_compat"]
 PAY_TO = "0x97a2c493228310e601769c36dc393aec68035abe"
 X402_NETWORK = "eip155:84532"
 X402_PRICE = "$0.002"
-X402_FACILITATOR_URL = "https://facilitator.x402.org"
+X402_FACILITATOR_URL = "https://x402.org/facilitator"

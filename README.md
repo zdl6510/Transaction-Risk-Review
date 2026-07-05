@@ -51,7 +51,7 @@ The Worker reads these variables from `wrangler.toml` or Cloudflare dashboard:
 - `PAY_TO` - EVM address that receives x402 payments
 - `X402_NETWORK` - CAIP-2 network id, default `eip155:84532`
 - `X402_PRICE` - x402 price string, default `$0.002`
-- `X402_FACILITATOR_URL` - facilitator URL, default `https://facilitator.x402.org`
+- `X402_FACILITATOR_URL` - facilitator URL, default `https://x402.org/facilitator`
 
 The current default `PAY_TO` is the Agentic Wallet EVM address:
 

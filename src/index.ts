@@ -16,7 +16,7 @@ type Env = {
 const DEFAULT_PAY_TO = "0x97a2c493228310e601769c36dc393aec68035abe";
 const DEFAULT_NETWORK = "eip155:84532";
 const DEFAULT_PRICE = "$0.002";
-const DEFAULT_FACILITATOR = "https://facilitator.x402.org";
+const DEFAULT_FACILITATOR = "https://x402.org/facilitator";
 
 const app = new Hono<{ Bindings: Env }>();
 
