@@ -125,7 +125,7 @@ app.use("/review", async (c, next) => {
     server,
     undefined,
     undefined,
-    false,
+    true,
   );
 
   return middleware(c, next);
