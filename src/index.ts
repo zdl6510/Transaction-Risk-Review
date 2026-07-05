@@ -20,6 +20,18 @@ const DEFAULT_FACILITATOR = "https://facilitator.x402.org";
 
 const app = new Hono<{ Bindings: Env }>();
 
+app.onError((err, c) => {
+  console.error(err);
+  return c.json(
+    {
+      ok: false,
+      error: err.name || "WorkerError",
+      message: err.message || "Unexpected Worker error",
+    },
+    500,
+  );
+});
+
 app.use(
   "*",
   cors({
@@ -108,35 +120,6 @@ app.use("/review", async (c, next) => {
         description:
           "Transaction Risk Review: deterministic pre-check for transfers, approvals, and contract-call parameters.",
         mimeType: "application/json",
-        extensions: {
-          bazaar: {
-            outputSchema: {
-              input: {
-                type: "http",
-                method: "POST",
-                bodyType: "json",
-                body: {
-                  type: "object",
-                  required: ["chain", "transactionType"],
-                  properties: {
-                    chain: { type: "string" },
-                    transactionType: { type: "string" },
-                    from: { type: "string" },
-                    to: { type: "string" },
-                    contractAddress: { type: "string" },
-                    tokenAddress: { type: "string" },
-                    amount: { type: "string" },
-                    symbol: { type: "string" },
-                    calldata: { type: "string" },
-                    method: { type: "string" },
-                    spender: { type: "string" },
-                    notes: { type: "string" },
-                  },
-                },
-              },
-            },
-          },
-        },
       },
     },
     server,
